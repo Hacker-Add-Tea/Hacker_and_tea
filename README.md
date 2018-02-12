@@ -20,4 +20,4 @@
 
 欢迎大家关注我们的公众号：
 
-![公众号二维码](/Users/john/Hacker_and_tea/prc/公众号二维码.jpg)
+![公众号二维码](https://github.com/Hacker-Add-Tea/Hacker_and_tea/blob/master/%20images/公众号二维码.jpg)
