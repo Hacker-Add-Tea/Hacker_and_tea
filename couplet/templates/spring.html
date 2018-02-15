@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>春联上下联判断演示</title>
+
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script>
+function getOtherMessage(){
+    var input = document.getElementById("input");
+    input = input.value;
+    var data = {
+    data: JSON.stringify({
+                        "value":input
+                    })
+            }
+    $.ajax({
+            url : "/spring",  //向后台请求数据的url
+            type:'POST', //请求类型
+            data : data,  //向后台传递的参数
+            dataType : "json", //将返回的数据转换成json数据
+            success : function(data){
+                $("#div1").html(data.value);
+            },
+            error : function(){
+{#                alert("报错");#}
+            }
+        });
+}
+</script>
+</head>
+<body>
+<div style="float: left">
+<input type="text" placeholder="请输判断的春联" id="input">
+<br />
+</div>
+<input type="button" value="提交" onclick="getOtherMessage();" style="border: 0px;"/>
+
+<script type="text/javascript" src="static/js/index.js"></script>
+<div id="div1" style="color :#FF4040"></div>
+<div style="text-align:center;clear:both;">
+
+</div>
+</body>
